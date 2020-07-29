@@ -4,14 +4,14 @@ import com.squareup.moshi.Json
 
 
 data class User(
-    @Json(name = "login")
+    @field:Json(name = "login")
     val login: String = "",
-    @Json(name = "id")
+    @field:Json(name = "id")
     val id: Int = 0,
-    @Json(name = "name")
+    @field:Json(name = "name")
     val name: String = "",
-    @Json(name = "email")
+    @field:Json(name = "email")
     val email: String = "",
-    @Json(name = "avatar_url")
-    val avatar: String = ""
+    @field:Json(name = "avatar_url")
+    val imageUrl: String = ""
 )

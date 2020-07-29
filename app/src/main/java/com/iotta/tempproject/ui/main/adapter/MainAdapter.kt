@@ -17,7 +17,8 @@ class MainAdapter(private var users: List<User> = emptyList()) :
             itemView.textViewUserName.text = user.name
             itemView.textViewUserEmail.text = user.email
             Glide.with(itemView.imageViewAvatar.context)
-                .load(user.avatar)
+                .load(user.imageUrl)
+                .placeholder(R.drawable.ic_user_24)
                 .into(itemView.imageViewAvatar)
         }
     }

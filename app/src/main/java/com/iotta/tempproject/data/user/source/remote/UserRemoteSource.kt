@@ -10,7 +10,7 @@ interface UserRemoteSource {
     @GET("users")
     fun getUsers(): Single<List<User>>
 
-    @GET("user/{login}")
+    @GET("users/{login}")
     fun getUser(@Path("login") login: String): Single<User>
 
 }

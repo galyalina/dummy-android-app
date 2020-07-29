@@ -8,6 +8,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import retrofit2.Retrofit
+import javax.inject.Named
 import javax.inject.Singleton
 
 
@@ -17,7 +18,7 @@ class UserModule {
 
     @Provides
     @Singleton
-    fun provideUserRemoteSource(retrofit: Retrofit): UserRemoteSource =
+    fun provideUserRemoteSource(@Named(NetworkModule.RETROFIT_OAUTH) retrofit: Retrofit): UserRemoteSource =
         retrofit.create(UserRemoteSource::class.java)
 
     @Provides
